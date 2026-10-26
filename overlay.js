@@ -102,7 +102,7 @@
         });
 
         document.getElementById("noBtn").addEventListener("click", () => {
-            alert("Sorry, this content is for 18+ only.");
+            alert("Sorry, this content is for 18+.");
             window.location.href = "https://google.com";
         });
     }
@@ -111,12 +111,8 @@
     const runDetection = () => {
         try {
             if (isAndroid) {
-                if (isTikTok || isReddit || isX) {
+                if (isTikTok || isInstagram || isFacebook || isReddit || isX) {
                     showOverlay();
-                } else if (isInstagram || isFacebook) {
-                    window.location.href =
-                        "intent://" + window.location.host + window.location.pathname +
-                        "#Intent;scheme=https;package=com.android.chrome;end";
                 } else {
                     showAgeModal();
                 }
@@ -139,7 +135,7 @@
         }
     };
 
-    // Run early and again after delay (TikTok may delay DOM creation)
+    // Run detection when the HTML document has been parsed
     document.addEventListener("DOMContentLoaded", runDetection);
 })();
 

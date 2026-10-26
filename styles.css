@@ -70,7 +70,7 @@ h1 {
     margin-bottom: 0;
 }
 
-.ofButton {
+.bigButton {
     margin-bottom: 20px;
     padding: 10px 0;
     width: 70%;
@@ -81,13 +81,13 @@ h1 {
     color: black;
 }
 
-.ofButton:hover {
+.bigButton:hover {
     color: #F5F6F9;
     background-color: black;
     border: 1px solid #F5F6F9;
 }
 
-#of {
+#big {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,8 +146,8 @@ a {
 
 }
 
-.ofTile {
-    background-image: url(./images/onlytile.jpeg);
+.bigTile {
+    background-image: url(./images/);
     background-size: cover;
     background-position: center;
 } */
